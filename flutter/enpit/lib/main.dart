@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:enpit/models/shop.dart';
 import 'dart:async';
 import 'package:enpit/models/shop_list.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,6 +14,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('ja'), // Japanese
+      ],
       home: MyHomePage(),
     );
   }
