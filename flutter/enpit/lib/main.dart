@@ -19,6 +19,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'where2eat',
       // 日本語対応
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
       supportedLocales: [
         Locale('ja'),
       ],
