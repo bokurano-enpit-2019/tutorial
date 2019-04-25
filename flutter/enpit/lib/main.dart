@@ -26,7 +26,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final ShopList _shopList = ShopList();
   Future<Shop> _shop;
-  final TextEditingController tec = TextEditingController();
 
   void _changeShop() {
     setState(() {
@@ -35,6 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _showFormDialog(BuildContext context) {
+    final TextEditingController tec = TextEditingController();
+
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -63,7 +64,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   );
                   _changeShop();
-                  tec.text = '';
                   Navigator.of(context).pop();
                 }
               },
