@@ -1,3 +1,8 @@
+/**
+ * お店のModel
+ * 現時点では店の名前と店IDのみ保持
+ * */
+
 import 'package:meta/meta.dart';
 
 class Shop {
